@@ -4,8 +4,18 @@
     <script
       src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js">
     </script>
+    <script>
+AFRAME.registercomponent('removing', {
+init: function () {
+var el = this.el;
+el.addEventListener('mouseenter', function () { el.setAttribute('color', 'red'); });
+el.addEvent Listener('mouseleave', function () { el.setAttribute('color', 'firebrick'); }); el.addEvent Listener('click', function () { el.remove(); });
+}
+});
+</script>
 </head>
 <body>
+  
 <a-scene id="s1" background="color: firebrick" physics>
         <a-plane static-body height="100" width="100" color="black" rotation="-90 0 0"></a-plane>
         <a-box dynamic-body="angularDumping: 1" position="1 57 -6" color="pink" scale="2 1 1"></a-box>
@@ -15,6 +25,10 @@
         </a-entity>
     </a-scene>
 
+<a-scene id="1" background="color: cadetblue" cursor="rayorigin: mouse">
+<a-plane static-body height="100" width="100" rotation="-90 0 0"></a-plane> <a-camera><a-cursor fuse="true" fuse-timeout="5000"></a-cursor></a-camera>
+<a-entity cursor raycaster="showLine: true" oculus-touch-controls="hand: right"></a-entity> </a-scene>
+  
 <script>
 var scene1 = document.getElementById('s1');
 for (var i = -5; i <= 3; i++) {
@@ -33,3 +47,20 @@ var box = document.createElement('a-box');
 </html>
 
 
+
+
+
+
+
+
+
+
+
+
+<script>
+var scene1 = document.getElementById('s1');
+for (var 1 = 0; i < 9; i++) {
+var e= i % 2, o = !e;
+for (var j = 0; j < 5; j++) {
+var box = document.createElement('a-box');
+box.setAttribute('dynamic-body', "'); box.setAttribute('removing', '');
