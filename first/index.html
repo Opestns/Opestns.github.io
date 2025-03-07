@@ -47,9 +47,11 @@ scene1.appendChild(tree);}
 
 
 <script>
-AFRAME.registerComponent("sounding", { tick: function () {
-});
+    AFRAME.registerComponent("sounding", {
+      tick: function () {
 if (Math.random() < 0.99) return; 
   var sound = this.el.components.sound;
 if (sound) sound.playSound();
+      }
+        });
 </script>
