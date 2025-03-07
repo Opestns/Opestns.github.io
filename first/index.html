@@ -22,6 +22,10 @@
 <a-entity gltf-model="#bird" scale="5 5 5" shadow="receive: false" position="50 25 -50" rotation="0 180 0"> 
 </a-entity>
 
+</a-scene>
+</body>
+
+<script>
 var scene1 = document.getElementById('s1'); 
 for (var i = 0; i < 500; i++) {
   var tree = document.createElement('a-entity');
@@ -37,7 +41,4 @@ for (var i = 0; i < 500; i++) {
  tree.setAttribute('shadow', 'receive: false');
   
 scene1.appendChild(tree);
-  
-</a-scene>
-</body>
-
+  </script>
