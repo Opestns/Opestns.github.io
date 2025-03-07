@@ -1,8 +1,12 @@
 <head>
 <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/@croquet/croquet"></script>
+<script src="https://unpkg.com/aframe-croquet-component/public/lib/aframe-croquet-component.js"></script>
 </head>
 <body>
+  <template id="avatarTemplate">
+<a-entity gltf-model="#witch" scale="5 5 5" rotation="0 180 0"></a-entity> </template>
 <a-scene id="s1" background="color:#0d0928" fog="far:300" shadow="type: pcfsoft">
 <a-camera position="0 3 0"></a-camera>
 <a-sphere radius="500" position="0 5000 0" material="fog: false"></a-sphere>
